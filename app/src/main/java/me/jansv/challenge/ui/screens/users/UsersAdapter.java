@@ -80,6 +80,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.Holder>{
             intent.putExtra(SP_KEY, u.getRepoUrl());
             //end of this part
 
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             v.getContext().getApplicationContext().startActivity(intent);
         }
     }
